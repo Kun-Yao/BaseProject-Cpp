@@ -14,6 +14,11 @@ int addNumber(int a, int b) {
     return a + b;
 }
 
+int timeNumber(int a, int b)
+{
+    return a * b;
+}
+
 int getTriangleType(int a, int b, int c) {
     if (a > b && a > c) {
         int temp = c; c = a; a = temp;
