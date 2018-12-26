@@ -1,43 +1,33 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
+#include "search.h"
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-#ifndef TEST
 int main() {
-    printf("Rule Breaker!!!\n");
-    printf("5 + 2 = %d\n", addNumber(5, 2));
-    printf("%d\n", getTriangleType(3, 4, 5));
-    return 0;
-}
-#endif // TEST
-
-int addNumber(int a, int b) {
-    return a + b;
-}
-
-int timeNumber(int a, int b)
-{
-    return a * b;
-}
-
-int getTriangleType(int a, int b, int c) {
-    if (a > b && a > c) {
-        int temp = c; c = a; a = temp;
-    }
-    else if (b > a && b > c) {
-        int temp = c; c = b; b = temp;
-    }
-
-    if (a + b <= c) {
-        return -2;
-    }
-    else if (a * a + b * b == c * c) {
-        return 0;
-    }
-    else if (a * a + b * b > c * c) {
-        return 1;
-    }
-    else if (a * a + b * b < c * c) {
-        return -1;
-    }
-    return -3;
+	int command;
+	do{
+		printf("請輸入代碼:\n");
+		printf("1: 食物需求 2: 排序 3: 輪盤 4: 搜尋 0: 結束\n");
+		scanf("%d",&command);
+		switch(command){
+			case 1:
+				D0642339();
+				break;
+			case 2:
+				D0641533();
+				break;
+			case 3:
+				D0611117();
+				break;
+			case 4:
+				D0642075();
+				break;
+			case 0:
+				break;
+			default:
+				printf("wrong command\n");
+				break;
+		}
+	}while(command!=0);
+	return 0;
 }
